@@ -6,10 +6,16 @@ import ThanksCard from './ThanksCard';
 const Card = () => {
     const [inputSharing, setInputSharing] = useState('');
 
+    const mycallback = () => {
+        console.log("Card Callback setInputSharing:>",inputSharing,"<")
+        setInputSharing("Stefan");
+        console.log("mycallback had set the value")
+    }
+
     return (
         <Box sx={cardStyles}>
             {inputSharing === '' ? (
-                <RatingCard inputSharing={inputSharing} setInputSharing={setInputSharing} />
+                <RatingCard myc={mycallback} inputSharing={inputSharing} setInputSharing={setInputSharing} />
             ) : (
                 <ThanksCard inputSharing={inputSharing} />
             )}

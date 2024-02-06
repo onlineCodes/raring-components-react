@@ -4,6 +4,7 @@ import { Stack, Button, Typography } from '@mui/material';
 import ThankIcon from '../assets/illustration-thank-you.svg';
 
 const ThanksCard = ({ inputSharing }) => {
+    console.log("ThanksCard got inputSharing:>",inputSharing,"<")
     return (
         <Stack {...thanksCardStyles}>
             <img src={ThankIcon} alt={`${ThankIcon} icon`} />
