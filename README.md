@@ -12,7 +12,11 @@ Beispiel: https://vermillion-salamander-e78fcb.netlify.app
   - thesequence's fork [Github Rating Wochenprojekt](https://github.com/onlineCodes/raring-components-react/tree/DenysMakarov) LOL **App:**[Rating netlify.app](https://65c21b9a1457b876678e5de9--wochenprojekt-react-rating.netlify.app)
   - https://github.com/thesequence/raring-components-react
 
-In main Branch sollen keine commits erfolgen daher nach git clone ... git switch -c DeinName ein neuen Branch anlegen. Wir üben auch gern ein git push oder Pullrequest bei Bedarf. 
+In main-Branch sollen keine commits erfolgen daher nach git clone URL ein git switch -c DeinName eingeben um ein neuen Branch anzulegen. Wir üben auch gern ein git push oder Pullrequest bei Bedarf. 
+
+git clone https://github.com/onlineCodes/raring-components-react.git
+
+git switch -c DeinName
 
 git push --set-upstream origin DeinBranchname
 
