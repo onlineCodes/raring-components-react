@@ -1,20 +1,26 @@
-import { Stack } from '@mui/material';
+import { useState } from 'react';
 import './App.css';
-import Card from './components/Card';
 
-function App() {
+import RatingScreen from './components/RatingScreen/RatingScreen';
+import ThankYouScreen from './components/ThankYouScreen/ThankYouScreen';
+
+const App = () => {
+    const [submitted, setSubmitted] = useState(false);
+    const [rating, setRating] = useState(null);
+
+    const handleRating = (rating) => {
+        setRating(rating);
+    };
+
     return (
-        <Stack {...appStyles}>
-            <Card />
-        </Stack>
+        <>
+            {!submitted ? (
+                <RatingScreen onSubmit={() => setSubmitted(true)} onRating={handleRating} />
+            ) : (
+                <ThankYouScreen rating={rating} />
+            )}
+        </>
     );
-}
-
-const appStyles = {
-    minHeight: '100vh',
-    justifyContent: 'center',
-    alignItems: 'center',
-    bgcolor: 'rgb(18, 20, 23)',
 };
 
 export default App;

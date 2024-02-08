@@ -1,15 +1,20 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
+import { useState,useRef } from 'react';
 import { Stack, Button, Typography, Fab, Snackbar, Alert } from '@mui/material';
 import Star from '../assets/icon-star.svg';
 import { convertLength } from '@mui/material/styles/cssUtils';
 
 const RatingCard = ({ inputSharing, setInputSharing, myc}) => {
     const InputBtns = ['1', '2', '3', '4', '5'];
-    const [input, setInput] = useState('');
+    const [input, setInput] = useState(4);
     const [open, setOpen] = useState(false);
     let nochmal = false;
+    
+    console.log("RC",input);
+
+
+
     const handleInput = (e) => { // STACK onClick
         //console.log("handleInput(e.currentTarget):",e.currentTarget,item, index);
         console.log("handleInput(e.currentTarget):",e.currentTarget.innerText);
@@ -75,6 +80,7 @@ const RatingCard = ({ inputSharing, setInputSharing, myc}) => {
                     appreciated to help us improve our offering!
                 </Typography>
                 <Stack flexDirection="row" gap={2} justifyContent="center">
+                    
                     {InputBtns.map((item, index) => (
                         <Fab
                             key={index}
@@ -93,7 +99,7 @@ const RatingCard = ({ inputSharing, setInputSharing, myc}) => {
                                     color: 'rgb(255, 255, 255)',
                                 },
                             }}
-                            // onClick={handleInput(e und item, index)}
+                            //onClick={handleInput(e und ,item, index)}
                             onClick={handleInput}
                         >
                             {item}
