@@ -1,0 +1,58 @@
+rating-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: var(--boxWidth);
+    background-color: var(--boxBgColor);
+    border-radius: var(--borderRadius);
+    padding: var(--boxPadding);
+    text-align: start;
+    box-shadow: var(--boxShadow);
+
+    & h2 {
+        margin: 0;
+    }
+
+    & img {
+        width: 20px;
+        height: auto;
+        background-color: #262f38;
+        padding: 15px;
+        border-radius: 50%;
+    }
+
+    & button-section {
+        display: flex;
+        justify-content: space-between;
+
+        & button {
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #262f38;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: darkgray;
+                color: white;
+            }
+
+            &:focus {
+                background-color: var(--btnColor);
+                outline: none;
+            }
+        }
+    }
+
+    & button[data-submit] {
+        background-color: var(--btnColor);
+        border-radius: var(--borderRadius);
+
+        &:hover {
+            background-color: white;
+            color: var(--btnColor);
+            border: none;
+        }
+    }
+}

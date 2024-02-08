@@ -1,0 +1,30 @@
+thank-you-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: var(--boxWidth);
+    background-color: var(--boxBgColor);
+    border-radius: var(--borderRadius);
+    padding: var(--boxPadding);
+    box-shadow: var(--boxShadow);
+
+    & span {
+        margin: 1em 4em;
+        padding: 0.5em 0;
+        border-radius: var(--borderRadius);
+        background-color: #262f38;
+        color: var(--btnColor);
+        font-size: 1em;
+    }
+
+    & h2 {
+        margin: 0;
+    }
+
+    & img {
+        width: 50%;
+        height: auto;
+        align-self: center;
+    }
+}
