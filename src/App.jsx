@@ -1,26 +1,9 @@
-import { useState } from 'react';
+// App.jsx
 import './App.css';
-
-import RatingScreen from './components/RatingScreen/RatingScreen';
-import ThankYouScreen from './components/ThankYouScreen/ThankYouScreen';
+import RateOurService from './components/RateOurService/RateOurService';
 
 const App = () => {
-    const [submitted, setSubmitted] = useState(false);
-    const [rating, setRating] = useState(null);
-
-    const handleRating = (rating) => {
-        setRating(rating);
-    };
-
-    return (
-        <>
-            {!submitted ? (
-                <RatingScreen onSubmit={() => setSubmitted(true)} onRating={handleRating} />
-            ) : (
-                <ThankYouScreen rating={rating} />
-            )}
-        </>
-    );
+    return <RateOurService />;
 };
 
 export default App;
